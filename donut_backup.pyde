@@ -44,20 +44,9 @@ class object:
             hu = map(i,0,len(self.point_array),0,255)
             strokeWeight(3)
             stroke(hu,255,self.light_values[i])
-            #stroke(hu,255,255)
             point(self.point_array[i][0],self.point_array[i][2])
-            #if (i==len(self.point_array)-1):
-                #line(self.point_array[i][0],self.point_array[i][2],self.point_array[0][0],self.point_array[0][2])
-            #    pass
-           # else:
-            #    point(self.point_array[i][0],self.point_array[i][2])
-                #line(self.point_array[i][0],self.point_array[i][2],self.point_array[i+1][0],self.point_array[i+1][2])
-            #beginShape()
-            #fill(100)
-            #vertex(self.point_array[i][0],self.point_array[i][2])
-            #vertex(self.point_array[i+1][0],self.point_array[i+1][2])
-            #endShape()
-    def rota(self,x_angle,y_angle,z_angle):
+            
+    def rota(self,x_angle,y_angle,z_angle): #function to rotate the torus, we use 3D rotation matrices
         x_matrix=[[1,0,0],[0,cos(x_angle),-sin(x_angle)],[0,sin(x_angle),cos(x_angle)]]
         y_matrix=[[cos(y_angle),0,sin(y_angle)],[0,1,0],[-sin(y_angle),0,cos(y_angle)]]
         z_matrix=[[cos(z_angle),-sin(z_angle),0],[sin(z_angle),cos(z_angle),0],[0,0,1]]
